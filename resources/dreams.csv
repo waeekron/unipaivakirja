@@ -1,0 +1,4 @@
+dream_id | user_id | location | duration | date | rating
+1, 1, uni1.txt, 8, 13.1.22, 2
+2, 1, uni2.txt, 7, 14.1.22, -1
+3, 5, uni3.txt, 1, 1.10.22, 3 
