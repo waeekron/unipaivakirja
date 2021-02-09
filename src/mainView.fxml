@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.RadioButtonChooser?>
+<?import fi.jyu.mit.fxgui.ScrollBorder?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Valikko">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Kirjaudu ulos" />
+              <MenuItem mnemonicParsing="false" text="Lopeta..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Apua">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Apua" />
+                  <MenuItem mnemonicParsing="false" text="Tietoja..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Muokkaa">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Lisää..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <ScrollBorder prefHeight="375.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="111.0" text="1.10.22" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="113.0" text="14.1.22" />
+            <Label layoutX="21.0" layoutY="74.0" prefHeight="17.0" prefWidth="103.0" text="13.1.22" />
+         </children>
+      </ScrollBorder>
+   </left>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButtonChooser prefHeight="100.0" prefWidth="99.0" rivit="Pvm&#10;Kesto&#10;Laatu&#10;" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </RadioButtonChooser>
+            <Button mnemonicParsing="false" text="Järjestä">
+               <HBox.margin>
+                  <Insets top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Lisää merkintä">
+               <HBox.margin>
+                  <Insets left="40.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Hae">
+               <HBox.margin>
+                  <Insets left="40.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <TextField promptText="Etsi #Tagilla...">
+               <HBox.margin>
+                  <Insets left="10.0" top="40.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.7216117216117216" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="166.0" prefWidth="473.0">
+               <children>
+                  <TextArea layoutX="6.0" layoutY="5.0" prefHeight="187.0" prefWidth="320.0" text="Unen kuvaus luetaan .txt tiedostosta..." />
+                  <Label layoutX="386.0" layoutY="14.0" text="13.1.22" />
+                  <Label layoutX="398.0" layoutY="50.0" text="8h" />
+                  <Label layoutX="409.0" layoutY="89.0" text="2" />
+                  <Label layoutX="340.0" layoutY="14.0" text="Pvm" />
+                  <Label layoutX="340.0" layoutY="50.0" text="Kesto" />
+                  <Label layoutX="340.0" layoutY="90.0" text="Arvosana" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="473.0">
+               <children>
+                  <Label layoutX="42.0" layoutY="23.0" text="#Kissa" />
+                  <Label layoutX="141.0" layoutY="23.0" prefHeight="17.0" prefWidth="67.0" text="#Valveuni" />
+                  <Label layoutX="237.0" layoutY="23.0" prefHeight="17.0" prefWidth="55.0" text="#kuolema" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
