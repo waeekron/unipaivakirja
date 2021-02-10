@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -102,6 +101,8 @@
                   <Label layoutX="42.0" layoutY="23.0" text="#Kissa" />
                   <Label layoutX="141.0" layoutY="23.0" prefHeight="17.0" prefWidth="67.0" text="#Valveuni" />
                   <Label layoutX="237.0" layoutY="23.0" prefHeight="17.0" prefWidth="55.0" text="#kuolema" />
+                  <Button layoutX="398.0" layoutY="2.0" mnemonicParsing="false" text="Poista" />
+                  <Button layoutX="398.0" layoutY="37.0" mnemonicParsing="false" text="Muokkaa" />
                </children>
             </AnchorPane>
         </items>
