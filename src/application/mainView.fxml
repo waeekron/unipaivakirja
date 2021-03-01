@@ -15,25 +15,25 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainGUIController" >
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Valikko">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Kirjaudu ulos" />
-              <MenuItem mnemonicParsing="false" text="Lopeta..." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleKirjauduUlos" text="Kirjaudu ulos" />
+              <MenuItem mnemonicParsing="false" onAction="#handleLopeta" text="Lopeta..." />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Apua">
             <items>
-              <MenuItem mnemonicParsing="false" text="Apua" />
-                  <MenuItem mnemonicParsing="false" text="Tietoja..." />
+              <MenuItem mnemonicParsing="false" onAction="#handleApua" text="Apua" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleTietoja" text="Tietoja..." />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Muokkaa">
             <items>
-              <MenuItem mnemonicParsing="false" text="Lisää..." />
+              <MenuItem mnemonicParsing="false" onAction="#handleLisaaMerkinta" text="Lisää..." />
             </items>
           </Menu>
         </menus>
@@ -56,17 +56,17 @@
                   <Insets />
                </HBox.margin>
             </RadioButtonChooser>
-            <Button mnemonicParsing="false" text="Järjestä">
+            <Button mnemonicParsing="false" onAction="#handleJarjesta" text="Järjestä">
                <HBox.margin>
                   <Insets top="40.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Lisää merkintä">
+            <Button mnemonicParsing="false" onAction="#handleLisaaMerkinta" text="Lisää merkintä">
                <HBox.margin>
                   <Insets left="40.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Hae">
+            <Button mnemonicParsing="false" onAction="#handleHae" text="Hae">
                <HBox.margin>
                   <Insets left="40.0" top="40.0" />
                </HBox.margin>
@@ -101,8 +101,8 @@
                   <Label layoutX="42.0" layoutY="23.0" text="#Kissa" />
                   <Label layoutX="141.0" layoutY="23.0" prefHeight="17.0" prefWidth="67.0" text="#Valveuni" />
                   <Label layoutX="237.0" layoutY="23.0" prefHeight="17.0" prefWidth="55.0" text="#kuolema" />
-                  <Button layoutX="398.0" layoutY="2.0" mnemonicParsing="false" text="Poista" />
-                  <Button layoutX="398.0" layoutY="37.0" mnemonicParsing="false" text="Muokkaa" />
+                  <Button layoutX="398.0" layoutY="2.0" mnemonicParsing="false" onAction="#handlePoista" text="Poista" />
+                  <Button layoutX="398.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleLisaaMerkinta" text="Muokkaa" />
                </children>
             </AnchorPane>
         </items>
