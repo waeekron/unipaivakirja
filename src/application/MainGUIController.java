@@ -4,6 +4,13 @@ import fi.jyu.mit.fxgui.Dialogs;
 import fi.jyu.mit.fxgui.ModalController;
 import javafx.fxml.FXML;
 
+/**
+ * 
+ * @author waeekron
+ * @version 1.3.2021
+ *
+ */
+
 
 public class MainGUIController {
 	
