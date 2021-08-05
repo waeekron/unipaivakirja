@@ -6,16 +6,13 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addDreamController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -42,51 +39,55 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea prefHeight="137.0" prefWidth="600.0" />
+            <TextArea fx:id="editSisalto" prefHeight="137.0" prefWidth="600.0" wrapText="true" />
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label text="Painajainen">
+                  <Label text="Arvio">
                      <HBox.margin>
-                        <Insets left="20.0" top="50.0" />
+                        <Insets left="25.0" top="25.0" />
                      </HBox.margin>
                   </Label>
-                  <Slider>
+                  <TextField fx:id="editArvio" prefHeight="26.0" prefWidth="42.0">
                      <HBox.margin>
-                        <Insets top="35.0" />
-                     </HBox.margin>
-                  </Slider>
-                  <Label text="Hyvä">
-                     <HBox.margin>
-                        <Insets top="50.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label text="Kesto">
-                     <HBox.margin>
-                        <Insets left="50.0" top="40.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField>
-                     <HBox.margin>
-                        <Insets left="10.0" top="40.0" />
+                        <Insets left="10.0" top="25.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" text="Lisää">
+                  <Label text="Kesto">
                      <HBox.margin>
-                        <Insets left="50.0" top="40.0" />
+                        <Insets left="25.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="editKesto" prefHeight="26.0" prefWidth="68.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Päivämäärä">
+                     <HBox.margin>
+                        <Insets left="25.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="editPaivamaara" prefHeight="26.0" prefWidth="110.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#handlePeruuta" text="Peruuta">
+                     <HBox.margin>
+                        <Insets left="25.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="labelVirhe" />
+                  <Button mnemonicParsing="false" onAction="#handleLisaa" text="Ok">
+                     <HBox.margin>
+                        <Insets left="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
                </children>
-            </HBox>
-            <Button mnemonicParsing="false" text="Liitä tägejä">
                <VBox.margin>
-                  <Insets bottom="20.0" left="40.0" />
+                  <Insets top="50.0" />
                </VBox.margin>
-            </Button>
-            <ScrollPane prefHeight="93.0" prefWidth="600.0">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-              </content>
-            </ScrollPane>
+            </HBox>
          </children>
       </VBox>
    </center>

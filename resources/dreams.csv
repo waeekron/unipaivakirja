@@ -1,4 +1,8 @@
-dream_id | user_id | location | duration | date | rating
-1, 1, uni1.txt, 8, 13.1.22, 2
-2, 1, uni2.txt, 7, 14.1.22, -1
-3, 5, uni3.txt, 1, 1.10.22, 3 
+10|Näin unta kissasta.|7|2021-08-05|5
+13|Näin unta jossa olin kalassa.|5|2021-08-04|2
+9|Näin unta jossa toistui seuraava viesti : "Kaikki sairaanhoitajamme ovat varattuja, koita myöhemmin uudelleen tai jätä soittopyyntö valitsemalla yksi."|8|2021-08-03|1
+11|Näin unta kahvista|6|2021-08-02|4
+2|Näin, unta Aku Ankasta|8|2021-08-01|5
+12|Viime yönä näin painajaisen jossa en saanut HT7 läpi :D|7|2021-07-31|5
+14|Viime yönä nukuin tosi huonosti ja heräsin kärttyisenä.|4|2021-07-30|1
+15|Näin unta jossa näin unta|1|2021-01-04|1
