@@ -42,8 +42,9 @@
    <bottom>
       <HBox prefHeight="99.0" prefWidth="595.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButtonChooser prefHeight="100.0" prefWidth="99.0" rivit="Kesto&#10;Laatu&#10;" HBox.hgrow="NEVER">
+            <RadioButtonChooser fx:id="chooserJarjestys" prefHeight="100.0" prefWidth="99.0" rivit="Kesto&#10;Laatu&#10;Pvm&#10;" HBox.hgrow="NEVER" >
                <HBox.margin>
+           
                   <Insets top="20.0" />
                </HBox.margin>
             </RadioButtonChooser>

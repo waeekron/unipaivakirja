@@ -13,12 +13,13 @@ import java.util.ResourceBundle;
 
 import fi.jyu.mit.fxgui.Dialogs;
 import fi.jyu.mit.fxgui.ModalController;
+import fi.jyu.mit.fxgui.RadioButtonChooser;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import kanta.UniPaivamaaraComparator;
+import kanta.UniComparator;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -47,7 +48,7 @@ public class MainGUIController  implements Initializable{
 	@FXML private ListChooser<Uni> chooserUnet;
 	@FXML private TextArea panelUni;
 	@FXML private ListChooser<TagNimi> chooserTagit;
-	
+	@FXML private RadioButtonChooser<Uni> chooserJarjestys;
 	@FXML private Label editPaivamaara;
 	@FXML private Label editArvio;
 	@FXML private Label editKesto;
@@ -95,6 +96,10 @@ public class MainGUIController  implements Initializable{
 	
 	@FXML private void handleTietoja() {
 		Dialogs.showMessageDialog("Toimintoa Tietoa... ei vielä ole"); // TODO: Tee tämä
+	}
+	
+	@FXML private void handleJarjesta( ) {
+		Dialogs.showMessageDialog("Järjestetään...");
 	}
 	
 	
@@ -165,6 +170,8 @@ public class MainGUIController  implements Initializable{
 	 * Tekee tarvittavat alustukset. Alustetaan listchooserin kuuntelija.  
 	 */
 	private void alusta() {
+		
+		chooserJarjestys.addSelectionListener(e -> jarjestaUnet());
 		chooserUnet.clear();
 		chooserUnet.addSelectionListener(e -> naytaUni());
 		chooserTagit.addSelectionListener(e -> naytaTaginNimi());
@@ -220,6 +227,27 @@ public class MainGUIController  implements Initializable{
 		
 	}
 	
+	private void jarjestaUnet() {
+		var jarjestys = chooserJarjestys.getSelectedText();
+		jarjestaUnet(jarjestys);
+	}
+	
+	private void jarjestaUnet(String jarjestys) {
+		System.out.println("täällä");
+		chooserUnet.clear();
+		
+		Collection<Uni> unet = sovellus.getUnet();
+		
+		System.out.println(jarjestys);
+		Collections.sort((List<Uni>)unet, new UniComparator(unet, jarjestys));
+		
+		for (Uni uni : unet) {
+			chooserUnet.add(uni.getPaivamaara(),uni);
+		}
+		laskeSeitsemanEdellisenPaivanUntenKa();	
+		laskeUntenKa();
+		chooserUnet.setSelectedIndex(0);
+	}
 	
 	/**
 	 * Muokkaa olemassa olevaa unta
@@ -432,7 +460,7 @@ public class MainGUIController  implements Initializable{
 			paivamaaraJarjestys.put(p, i);
 		}
 		
-		Collections.sort((List<Uni>)unet, new UniPaivamaaraComparator(paivamaaraJarjestys));
+		Collections.sort((List<Uni>)unet, new UniComparator(unet));
 		
 		for (Uni uni : unet) {
 			chooserUnet.add(uni.getPaivamaara(),uni);

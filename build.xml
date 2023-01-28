@@ -7,13 +7,28 @@
     <property name="dir.workspace" value="C:/Users/walte/ohj2/ws/harjoitustyo"/>
     <property name="dir.jarfile" value="${dir.buildfile}"/>
     <target name="create_run_jar">
-        <jar destfile="${dir.jarfile}/unipaivakirja.jar" filesetmanifest="mergewithoutmain">
+        <jar destfile="${dir.jarfile}/unipaivakirjasovellus.jar" filesetmanifest="mergewithoutmain">
             <manifest>
                 <attribute name="Main-Class" value="application.Main"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="${dir.jarfile}/bin"/>
-            
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/fxgui.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.jupiter.api_5.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.jupiter.engine_5.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.jupiter.migrationsupport_5.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.jupiter.params_5.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.platform.commons_1.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.platform.engine_1.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.platform.launcher_1.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.platform.runner_1.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.platform.suite.api_1.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit.vintage.engine_5.7.0.v20201026-1537.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.opentest4j_1.2.0.v20190826-0900.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.apiguardian_1.1.0.v20190826-0900.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.junit_4.13.0.v20200204-1500.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2012/eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/Ali.jar"/>
         </jar>
     </target>
 </project>
