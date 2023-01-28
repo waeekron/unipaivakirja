@@ -10,7 +10,7 @@ import java.util.Date;
 
 import unipaivakirja.Uni;
 /**
- * Luokka jonka avulla voidaan järjestää unia.
+ * Luokka jonka avulla voidaan järjestää unia halutun kentän perusteella.
  * @author waeekron 
  * @version 20.7.2021
  *
@@ -36,13 +36,12 @@ public class UniComparator implements Comparator<Uni> {
 	
 
 	/**
-	 * Vertaa kahta uni oliota orderBy oliomuuttu
+	 * Vertaa kahta uni oliota orderBy kentän perusteella
 	 */
 	@Override
 	public int compare(Uni o1, Uni o2) {
 
 		if (this.orderBy.equals("Kesto")) {
-			System.out.println("Kesto vertailussa");
 			Integer k1 = o1.getKesto();
 			Integer k2 = o2.getKesto();
 			return k1.compareTo(k2);

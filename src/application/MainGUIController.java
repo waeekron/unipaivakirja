@@ -233,7 +233,6 @@ public class MainGUIController  implements Initializable{
 	}
 	
 	private void jarjestaUnet(String jarjestys) {
-		System.out.println("täällä");
 		chooserUnet.clear();
 		
 		Collection<Uni> unet = sovellus.getUnet();
