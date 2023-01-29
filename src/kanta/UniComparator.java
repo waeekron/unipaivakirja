@@ -10,9 +10,9 @@ import java.util.Date;
 
 import unipaivakirja.Uni;
 /**
- * Luokka jonka avulla voidaan järjestää unia halutun kentän perusteella.
+ * Luokka jonka avulla voidaan järjestää unia.
  * @author waeekron 
- * @version 20.7.2021
+ * @version 29.1.2023
  *
  */
 public class UniComparator implements Comparator<Uni> {
@@ -23,10 +23,10 @@ public class UniComparator implements Comparator<Uni> {
 	
 	/**
 	 * Konstruktori
-	 * @param sortOrder Map jossa on päivämääriä merrkijonoina ja niiden indeksit
+	 * @param c kokoelma joka halutaan järjestää.
 	 */
-	public UniComparator(Collection<Uni> sortOrder) {
-		this.collection = sortOrder;
+	public UniComparator(Collection<Uni> c) {
+		this.collection = c;
 	}
 	
 	public UniComparator(Collection<Uni> collection, String orderBy) {
