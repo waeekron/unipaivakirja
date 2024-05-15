@@ -1,7 +1,7 @@
-# Unipäiväkirja
-Ensimmäisen vuoden ohjelmointikurssin harkkatyö :).
+# Sleep diary
+Practice project for a programming course.
 
-JavaFX työpöytäsovellus
+JavaFX desktop application.
 
 ![alt text](https://github.com/waeekron/unipaivakirja/blob/master/kuvat/workingApp.PNG)
 
